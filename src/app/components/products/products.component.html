@@ -1,0 +1,30 @@
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-body">
+      <span class="h3"> Productos </span>
+
+      <div  *ngIf="products.length > 0 " class="row row-cols-1 row-cols-md-3 g-4">
+
+        <div class="col" *ngFor="let product of products">
+          <div class="card">
+            <img src="https://firebasestorage.googleapis.com/v0/b/products-dbce5.appspot.com/o/products%2Fxioami.jpg?alt=media&token=9b943030-2300-4588-a03f-20b09d1d5a86" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{product.name}}</h5>
+              <h5 *ngIf="product.dateOffer >= dateDay" class="card-title">Precio Oferta: {{product.priceOffer | currency}} </h5>
+              <h5 *ngIf="product.dateOffer < dateDay" class="card-title">Precio Normal: {{product.price | currency}}</h5>
+              <span> {{product.dateOffer}}</span>
+              <p class="card-text">{{product.description}}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+</div>
+
+

@@ -14,12 +14,14 @@ import { CreateProductComponent } from './components/create-product/create-produ
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { environment } from 'src/environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProductsComponent } from './components/products/products.component';
 @NgModule({
   declarations: [
     AppComponent,
     ListProductsComponent,
     CreateProductComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
